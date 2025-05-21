@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio IA - Seu Nome</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="perfil">
+            <h1><%= nome %></h1>
+            <p class="habilidades"><%= habilidades %></p>
+            <a href="<%= linkedin %>" target="_blank" class="linkedin">LinkedIn</a>
+        </div>
+    </header>
+
+    <main>
+        <h2>Meus Projetos de IA</h2>
+        <div class="grid-projetos">
+            <% projetos.forEach((projeto) => { %>
+                <a href="<%= projeto.link %>" target="_blank" class="projeto-card">
+                    <div class="projeto-titulo"><%= projeto.nome %></div>
+                </a>
+            <% }); %>
+        </div>
+    </main>
+</body>
+</html>
